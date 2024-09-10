@@ -1,0 +1,578 @@
+:root {
+    --primary-color: #303233;
+    --secondary-color: #F8F8F8;
+    --third-color: #fcca03;
+
+    --default-transition: all 0.3s linear;
+
+    --section-gaps: 100px;
+
+    --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #7A7A7A;
+}
+
+.required {
+    color: red;
+}
+
+img {
+    max-width: 100%;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--primary-fonts);
+    overflow-wrap: inherit;
+    line-height: 1.3;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--primary-color);
+}
+
+ins {
+    text-decoration: none;
+}
+a,
+input[type="submit"],
+button,
+input[type="button"] {
+    cursor: pointer;
+    -webkit-transition: var(--default-transition);
+    -o-transition: var(--default-transition);
+    transition: var(--default-transition);
+}
+
+input,
+select,
+textarea,
+table {
+    width: 100%;
+}
+
+.social-links ul,
+.sub-menu,
+ul.contact-list,
+.social-link-list,
+.single-test-sty ul,
+.site-footer ul,
+.copyright-sec ul,
+.primary-menu,
+.list-none {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.reviewer span,
+.price-tag del,
+.price-tag del span {
+    color: #7A7A7A;
+    font-family: var(--third-fonts);
+    font-size: 14px;
+}
+
+.price-tag span,
+.price-tag ins * {
+    font-family: var(--third-fonts);
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.section-gaps{
+    padding: var(--section-gaps) 0;
+}
+.btn-wrap{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.form-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* extra */
+
+.content-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.content-wrap .left-content{
+    --size: 640px;
+    max-width: var(--size);
+    flex: 0 0 var(--size);
+}
+.content-wrap .right-content{
+    --size: 440px;
+    max-width: var(--size);
+    flex: 0 0 var(--size);
+}
+
+/* extra */
+
+/* main-title */
+
+.main-title.center{
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.main-title .title{
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* main-title */
+
+/* btn-box */
+
+.btn-box{
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-transform: capitalize;
+}
+.btn-box.primary-btn{
+    background-color: #303233;
+    color: #fff;
+}
+.btn-box.text-btn{
+    padding: 0;
+    text-decoration: underline;
+}
+
+/* btn-box */
+
+/* pagination */
+
+.pagination{
+    display: flex;
+    list-style: none;
+    margin: 30px -3px 0;
+    padding: 0;
+}
+.pagination li{
+    display: inline-block;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.pagination .page-numbers{
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #323232;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    background: 0 0;
+    border: 1px solid #ccc;
+    transition: var(--default-transition);
+}
+.pagination .page-numbers:hover, .pagination .page-numbers.current{
+    color: #fff;
+    background: #323232;
+    border-color: #323232;
+    text-decoration: none;
+}
+
+/* pagination */
+
+/* site-header */
+
+.site-logo img{
+    max-width: 150px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.top-header{
+    padding: 20px 0;
+}
+.header-right{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    align-items: center;
+}
+.search_box .form-wrap{
+    justify-content: center;
+}
+.search_box input{
+    padding: 10px 15px;
+}
+
+.primary-menu{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.primary-menu > li > a{
+    text-transform: capitalize;
+    color: #fff;
+}
+.bottom-header nav{
+    padding: 20px 0;
+    background-color: #303233;
+}
+.bottom-header.sticky nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    box-shadow: 0 10px 50px 0 rgba(46, 56, 220, 0.2);
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+/* site-header */
+
+/* site-footer */
+.site-footer{
+    background-color: #303233;
+    padding-top: 50px;
+}
+.footer-item h4{
+    color: #fff;
+}
+.footer-item a{
+    color: #fff;
+}
+.social-icons ul{
+    display: flex;
+    gap: 10px;
+}
+.copyright-list{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+.bottom-footer{
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+}
+/* site-footer */
+
+
+/* banner-section */
+
+.banner-section .banner{
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ddd;
+    position: relative;
+}
+.banner-section .banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+.banner-content{
+    --size: 540px;
+    max-width: var(--size);
+    flex: 0 0 var(--size);
+    position: relative;
+    z-index: 1;
+}
+.banner-content :is(p, .title){
+    color: #fff;
+}
+
+/* banner-section */
+
+/* two-col-section */
+
+.two-col-section .content-wrap{
+    align-items: center;
+}
+.two-col-section .right-content .image{
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ddd;
+}
+
+/* two-col-section */
+
+/* product-section */
+
+.product-section .pagination{
+    justify-content: center;
+}
+
+/* product-section */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.suggestions-list {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+    z-index: 1000;
+    display: none;
+}
+
+.suggestions-list div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions-list div:hover {
+    background-color: #f0f0f0;
+}
+.search-section .search_box .form-wrap{
+    justify-content: start;
+}
+
+/* General styling for the contact section */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.contact-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-content .image {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.left-content .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.right-content {
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-form {
+    background-color:red;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form .form-input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form .form-input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form .submit {
+    text-align: center;
+}
+
+.contact-form .submit input[type="submit"] {
+    padding: 10px 30px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: Green 0.3s;
+}
+
+.contact-form .submit input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Styling for the user login section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #e0f7fa; /* Light aqua background */
+}
+
+.login-section .container {
+    display: flex;
+    justify-content: center;
+}
+/* 
+.w-50 {
+    width: 50%;
+    max-width: 400px; 
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+} */
+
+/* Input fields styling */
+form input
+ {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Submit button styling */
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bcd4; /* Aqua color */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0097a7; /* Darker aqua on hover */
+}
+
+/* Label styling */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-box{
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.product-box a{
+    height: 100%;
+    width: 100%;   
+}
+.product-box .image{
+    height: 200px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.product-box .sale-btn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+.product-box .content .title{
+    font-size: 18px;
+}
+
+.our-brand-item{
+    height: 100px;
+    width: auto;
+}
+.our-brand-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.product-image{
+    height: 400px;
+    width: 100%;
+}
+
+.product-image img{
+    object-fit: contain;
+}
+

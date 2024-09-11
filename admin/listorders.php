@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $quantity = $row_order_details['quantity'];
 
                     // Update the product quantity in the products table
-                    $update_product = "UPDATE `tbl_product` SET `product_in_store` = `product_in_store` - $quantity WHERE `id` = '$product_id'";
+                    $update_product = "UPDATE `tbl_product` SET `product_in_store` = `product_in_store` - $quantity WHERE `productid` = '$product_id'";
                     mysqli_query($conn, $update_product);
                 }
                 $message = "Order marked as complete successfully";

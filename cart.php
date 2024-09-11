@@ -77,7 +77,7 @@ unset($_SESSION['cart_updated']); // Reset flag
             </div>
         </div>
         <form id='cart-form' action='' method='post'>
-            <table class='cart-list margin-bottom-cart'>
+            <table class='cart-list table table-bordered mb-5'>
                 <thead>
                     <tr>
                         <th class='product-remove'></th>
@@ -125,9 +125,9 @@ unset($_SESSION['cart_updated']); // Reset flag
                 }
                 ?>
 
-                <tr>
-                    <td class='text-end pt-5' colspan='6'>
-                        <input id='update-cart-btn' type='submit' name='update_cart' class='btn read-more checkout-btn' value='Update Cart'>
+                <tr class=" border-0">
+                    <td class='text-end pt-5 border-0' colspan='6'>
+                        <input id='update-cart-btn' type='submit' name='update_cart' class='btn w-auto read-more checkout-btn' value='Update Cart'>
                     </td> 
                 </tr> 
                 </tbody>
@@ -149,7 +149,7 @@ unset($_SESSION['cart_updated']); // Reset flag
                             </tbody>
                         </table>
                         <div class='proceed-to-checkout'>
-                            <a href='./user/order.php?cmrId=<?php echo $cmrId; ?>' class='btn read-more checkout-btn'>Proceed to checkout</a>
+                            <a href='./user/order.php?cmrId=<?php echo $cmrId; ?>' class='btn btn-primary mt-4 read-more checkout-btn'>Proceed to checkout</a>
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,7 @@ $user_name = isset($_SESSION['cmrName']) ? $_SESSION['cmrName'] : null;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>avilax</title>
     <link rel="stylesheet" href="http://localhost/aeroplane/css/bootstrap.css">
     <link rel="stylesheet" href="http://localhost/aeroplane/css/all.css">
     <link rel="stylesheet" href="http://localhost/aeroplane/css/animate.css">
@@ -26,7 +26,7 @@ $user_name = isset($_SESSION['cmrName']) ? $_SESSION['cmrName'] : null;
                     <div class="col-3">
                         <div class="site-logo">
                             <a href="http://localhost/aeroplane/index.php" title="">
-                                <img src="http://localhost/aeroplane/image/aeroplane-illustration-print-digital-use-65182743.webp" alt="">
+                                <img src="http://localhost/aeroplane/image/Screenshot 2024-09-11 013300.png" alt="">
                             </a>
                         </div>
                     </div>

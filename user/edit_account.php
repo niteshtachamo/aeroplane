@@ -114,7 +114,8 @@ if (isset($_POST['user_update'])) {
             <div class="form-outline">
                 <input type="password" class="password form-input" id="user_password" value="<?php echo htmlspecialchars($user_password); ?>" name="user_password">
                 <span id="passwordError" class="error-message"></span>
-                <input type="checkbox" class="showPassword"> Show Password
+                
+                <!-- <input type="checkbox" class="showPassword"> Show Password -->
             </div>
 
             <!-- Profile image upload -->

@@ -19,6 +19,7 @@ include('header1.php');
             </thead>
             <tbody>
                 <?php
+                
                 $select_query = "SELECT * FROM tbl_contact";
                 $result = mysqli_query($conn, $select_query);
                 // Check if query result has rows

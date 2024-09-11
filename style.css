@@ -412,12 +412,14 @@ ul.contact-list,
 }
 
 .contact-form {
-    background-color:red;
+   
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
+.contact-form .right-content{
+    background-color:#e8d9d9;;
+}
 .contact-form .form-group {
     margin-bottom: 20px;
 }
@@ -576,3 +578,8 @@ form label {
     object-fit: contain;
 }
 
+
+.product-thumbnail img{
+    height: 100px;
+    width: 100px;
+}

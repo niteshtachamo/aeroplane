@@ -15,23 +15,27 @@ $total_pages = ceil($total_products / $limit);
 
 // Get current page from URL, default to 1 if not set
 $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
-if ($page < 1)
+if ($page < 1) {
     $page = 1;
-if ($page > $total_pages)
+}
+if ($page > $total_pages) {
     $page = $total_pages;
+}
 
 $start = ($page - 1) * $limit;
+if ($start < 0) {
+    $start = 0; // Ensure start is never negative
+}
 
 ?>
 <!-- header -->
 
-
 <section class="product-section section-gaps">
     <div class="container">
         <div class="main-title center">
-            <h1 class="title">our product</h1>
+            <h1 class="title">Our Products</h1>
         </div>
-        <div class="row g-xl-5 g-4 ">
+        <div class="row g-xl-5 g-4">
             <?php
             allproduct($start, $limit);
             ?>
@@ -60,4 +64,4 @@ $start = ($page - 1) * $limit;
 </section>
 
 <!-- footer -->
-<?php include('footer.php') ?>
+<?php include('footer.php'); ?>

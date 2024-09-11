@@ -13,8 +13,8 @@ include("function/commonfunction.php");
                         <div class="container">
                             <div class="banner-content">
                                 <div class="main-title">
-                                    <h1 class="title">This is heading</h1>
-                                    <p>Lorem ipsum dolor sit amet.</p>
+                                    <h1 class="title">AVILAX</h1>
+                                    <p>Every takeoff is optional. Every landing is mandatory.</p>
                                     <div class="btn-wrap">
                                         <a href="#" class="btn-box primary-btn" title>Shop now</a>
                                     </div>
@@ -29,7 +29,7 @@ include("function/commonfunction.php");
                             <div class="banner-content">
                                 <div class="main-title">
                                     <h1 class="title"></h1>
-                                    <p></p>
+                                    <p>A SOLUTION FOR EVERY SKY</p>
                                     <div class="btn-wrap">
                                         <a href="#" class="btn-box primary-btn" title>Shop now</a>
                                     </div>
@@ -57,7 +57,7 @@ include("function/commonfunction.php");
             </div>
             <div class="right-content">
                 <div class="image">
-                    <img src="./image/images.jpeg" class="img-cover" alt="">
+                    <img src="./image/cute-yellow-jet-plane-vector-47790793.jpg" class="img-cover" alt="">
                 </div>
             </div>
         </div>

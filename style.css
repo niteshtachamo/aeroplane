@@ -477,7 +477,7 @@ ul.contact-list,
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    min-height: calc(100vh - 175px); /* Full viewport height */
     background-color: #e0f7fa; /* Light aqua background */
 }
 

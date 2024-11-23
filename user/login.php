@@ -1,5 +1,5 @@
 <?php
-// Start the session and include necessary files
+@session_start();
 include('../include/connect_db.php');
 
 if (isset($_POST['login'])) {
@@ -9,27 +9,38 @@ if (isset($_POST['login'])) {
     if (empty($email) || empty($password)) {
         $msg = "<span class='error'>Fields must not be empty!</span>";
     } else {
+        // Fetch user details based on email and password
         $query = "SELECT * FROM tbl_customer WHERE email = '$email' AND pass = '$password'";
         $result = mysqli_query($conn, $query);
 
-        if ($result && mysqli_num_rows($result) > 0) {
-            $value = mysqli_fetch_assoc($result);
-            session_start();
-            $_SESSION['cuslogin'] = true;
-            $_SESSION['cmrId'] = $value['id'];
-            $_SESSION['cmrName'] = $value['name'];
+        if (!$result) {
+            die("Query failed: " . mysqli_error($conn));
+        }
 
-            // Redirect before any output
-            header("Location: http://localhost/aeroplane/user/profile.php");
-            exit();
+        $row = mysqli_num_rows($result);
+
+        if ($row > 0) {
+            $row_data = mysqli_fetch_assoc($result);
+
+            if ($row_data['email_verified']) { // Check if email is verified
+                $_SESSION['cuslogin'] = true;
+                $_SESSION['cmrId'] = $row_data['id'];
+                $_SESSION['cmrName'] = $row_data['name'];
+
+                echo "<script>alert('Login successfully')</script>";
+                echo "<script>window.open('profile.php','_self')</script>";
+            } else {
+                echo "<script>alert('Please verify your email before logging in')</script>";
+                echo "<script>window.open('login.php','_self')</script>";
+            }
         } else {
             $msg = "<span class='error'>Email or Password not matched!</span>";
         }
     }
 }
 include('../header.php');
-
 ?>
+
 
 
 <section class="login-section section-gaps">

@@ -3,6 +3,30 @@
 include ('../header.php');
 include ("../include/connect_db.php");
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require '../vendor/autoload.php';
+
+
+// Function to generate a random verification code
+function generateVerificationCode()
+{
+    return rand(100000, 999999); // Generates a 6-digit code
+}
+
+// Create a new instance of the PHPMailer class
+$mail = new PHPMailer();
+
+// Set up SMTP configuration
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'alishpawn00@gmail.com';
+$mail->Password = 'lupfmoliqmhqwumu';
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587;
+
 $errors = []; // Define an empty array to store errors
 
 if (isset($_POST['user_register'])) {
@@ -20,6 +44,7 @@ if (isset($_POST['user_register'])) {
         // Email already exists, display error message
         echo "<script>alert('Email is already registered. Please use a different email address.')</script>";
     } else {    
+        $verification_code = generateVerificationCode();
         // Handle file upload
         if (!empty($_FILES['user_image']['name'])) {
             $user_image = $_FILES['user_image']['name'];
@@ -31,12 +56,25 @@ if (isset($_POST['user_register'])) {
         }
 
         // Insert the user data into the database
-        $insert_query = "INSERT INTO `tbl_customer`(`name`, `email`, `pass`, `user_image`, `address`, `phone`) 
-                         VALUES ('$user_name', '$user_email', '$user_password', '$user_image', '$user_address', '$user_phone')";
+        $insert_query = "INSERT INTO `tbl_customer`(`name`, `email`, `pass`, `user_image`, `address`, `phone`, `verification_code`) 
+                         VALUES ('$user_name', '$user_email', '$user_password', '$user_image', '$user_address', '$user_phone', '$verification_code')";
         $result = mysqli_query($conn, $insert_query);
 
         if ($result) {
-            echo "<script>alert('Registration successful! You can now log in.')</script>";
+            $mail->setFrom('alishpawn00@gmail.com', 'Newari shop');
+            $mail->addAddress($user_email, $user_name);
+            $mail->Subject = 'Verify your email address for registration';
+            $mail->isHTML(true);
+            $mail->Body = "Please use the following verification code to verify your email address: <strong>$verification_code</strong><br>Enter the code on the following page: <a href='http://localhost/aeroplane/user/verify_email_click.php?code=$verification_code'>Verify Email</a>";
+
+            if (!$mail->send()) {
+                // Display error message if email sending fails
+                echo "<script>alert('Failed to send verification email.')</script>";
+            } else {
+                // Display success message if email sending succeeds
+                echo "<script>alert('Registration successful. Please check your email to verify your account.')</script>";
+                echo "<script>window.open('verify_email.php', '_self')</script>";
+            }
         } else {
             echo "<script>alert('Failed to register user.')</script>";
         }

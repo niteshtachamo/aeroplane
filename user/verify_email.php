@@ -1,6 +1,6 @@
 <?php
-include ("../include/connect_database.php");
-include ('user_header.php');
+include('../include/connect_db.php');
+include('../header.php');
 
 
 if (isset($_POST['verify'])) {
@@ -8,15 +8,15 @@ if (isset($_POST['verify'])) {
     $verification_code = $_POST['verification_code'];
 
     // Verify the code against the database
-    $query = "SELECT * FROM user_table WHERE user_email = '$user_email' And verification_code = '$verification_code'";
+    $query = "SELECT * FROM tbl_customer WHERE email = '$user_email' And verification_code = '$verification_code'";
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) == 1) {
         // Update user's email verification status
-        $update_query = "UPDATE `user_table` SET email_verified = 1 WHERE user_email = '$user_email'";
+        $update_query = "UPDATE `tbl_customer` SET email_verified = 1 WHERE email = '$user_email'";
         mysqli_query($conn, $update_query);
         echo "<script>alert('Your email has been successfully verified.');</script>";
-        echo "<script>window.open('login-user.php', '_self')</script>";
+        echo "<script>window.open('login.php', '_self')</script>";
     } else {
         echo "<script>alert('Invalid verification code. Please try again.');</script>";
     }
@@ -86,7 +86,7 @@ if (isset($_POST['verify'])) {
                         <div class="form-row d-flex gap-2 align-items-center">
                             <button type="submit" class="btn white-btn checkout-btn" name="verify">Verify</button>
                             <br>
-                            <a href="login-user.php" class="btn read-more checkout-btn">Login</a>
+                            <a href="login.php" class="btn read-more checkout-btn">Login</a>
                         </div>
                     </div>
                 </div>
@@ -96,4 +96,4 @@ if (isset($_POST['verify'])) {
 
 
 
-    <?php include ("user_footer.php"); ?>
+<?php include('../footer.php'); ?>

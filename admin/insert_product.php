@@ -53,8 +53,8 @@ if (isset($_POST['insert_product'])) {
                     <small id="product_description_error" class="text-danger"></small>
                 </div>
                 <div class="form-group">
-                    <label for="brands">Brands</label>
-                    <select name="select_brands" class="form-control">
+                    <label for="brands">Brands*</label>
+                    <select name="select_brands" required class="form-control">
                         <option value="">Select tags</option>
                         <?php
                         $sql = "SELECT * FROM `tbl_brand`";
@@ -67,8 +67,8 @@ if (isset($_POST['insert_product'])) {
                     <small id="select_brands_error" class="text-danger"></small>
                 </div>
                 <div class="form-group">
-                    <label for="categories">Categories</label>
-                    <select name="select_categories" class="form-control">
+                    <label for="categories">Categories*</label>
+                    <select name="select_categories" required class="form-control">
                         <option value="">Select categories</option>
                         <?php
                         $sql = "SELECT * FROM `tbl_category`";

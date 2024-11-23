@@ -55,8 +55,9 @@ include('../header.php');
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" required class="form-control">
                 </div>
-                <div class="form-group">
-                    <input type="submit" name="login" value="Login" class="btn btn-primary">
+                <div class="form-group d-flex align-items-center gap-3">
+                    <input type="submit" name="login" value="Login" class="w-25 btn btn-primary">
+                    <button class="btn btn-warning text-capitalize"><a href="verify_email.php">verify email</a></button>
                 </div>
                 <?php if (isset($msg)) echo $msg; ?>
             </form>

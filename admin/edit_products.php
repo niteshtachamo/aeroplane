@@ -136,7 +136,7 @@ if (isset($_POST['update_product'])) {
             </div>
             <div class="form-group">
                 <label for="product_image_1">Product Image</label>
-                <div class="d-flex">
+                <div class="">
                     <input type="file" name="product_image_1" id="product_image_1" class="form-control">
                     <img class="product-image" src="http://localhost/aeroplane/<?php echo htmlspecialchars($product_image_1, ENT_QUOTES, 'UTF-8'); ?>" alt="">
                 </div>

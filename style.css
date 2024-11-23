@@ -153,6 +153,23 @@ ul.contact-list,
 
 /* main-title */
 
+.cart {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+
 /* btn-box */
 
 .btn-box{
@@ -380,14 +397,6 @@ ul.contact-list,
     background-color: #f9f9f9;
 }
 
-.contact-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .content-wrap {
     display: flex;
     justify-content: space-between;
@@ -510,7 +519,7 @@ form input
 /* Submit button styling */
 form input[type="submit"] {
     width: 100%;
-    padding: 12px;
+    /* padding: 12px; */
     background-color: #00bcd4; /* Aqua color */
     color: #ffffff;
     border: none;

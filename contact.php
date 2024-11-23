@@ -3,13 +3,16 @@
 
 <section class="contact-section section-gaps">
     <div class="container">
-        <div class="content-wrap">
-            <div class="left-content">
+        <div class="main-title text-center mb-5 pb-4">
+            <h1 class="title">Contact Us</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6">
                 <div class="image">
                     <img src="./image/contact1.avif" alt="">
                 </div>
             </div>
-            <div class="right-content">
+            <div class="col-lg-6">
                 <div class="contact-form">
                     <form action="">
                         <div class="form-group">

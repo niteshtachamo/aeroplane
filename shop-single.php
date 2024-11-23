@@ -55,14 +55,26 @@ if (isset($_POST["shop_single_add_to_cart"])) {
 if (isset($_GET['id'])) {
     $product_id = mysqli_real_escape_string($conn, $_GET['id']);
 
+    if (empty($product_id)) {
+        echo "<p>Invalid product ID provided.</p>";
+        exit();
+    }
+    
     // Fetch product details
     $sql_query = "SELECT tbl_product.*, tbl_brand.brandName, tbl_category.catName 
                   FROM tbl_product 
                   INNER JOIN tbl_brand ON tbl_product.brandId = tbl_brand.brandId
                   INNER JOIN tbl_category ON tbl_product.catId = tbl_category.catId
                   WHERE tbl_product.productId = '$product_id'";
-
+    
     $result = mysqli_query($conn, $sql_query);
+    
+    // Check if query executed successfully
+    if (!$result) {
+        echo "<p>Error fetching product details: " . mysqli_error($conn) . "</p>";
+        exit();
+    }
+    
     if ($row = mysqli_fetch_assoc($result)) {
         $product_id = $row['productId'];
         $product_name = $row['productName'];
@@ -70,12 +82,13 @@ if (isset($_GET['id'])) {
         $product_price = $row['price'];
         $product_image = $row['image'];
         $brand_name = $row['brandName'];
-        $cat_name = $row["catName"];
+        $cat_name = $row['catName'];
         $product_in_store = $row['product_in_store'];
     } else {
-        echo "<p>Product not found.</p>";
+        echo "<p>Product not found. Please check the product ID or try again later.</p>";
         exit();
     }
+    
 }
 ?>
 <!-- header -->

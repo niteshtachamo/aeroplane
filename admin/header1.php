@@ -25,7 +25,7 @@ if (!isset($_SESSION['adminname'])) {
 <body>
     <header class="admin-header">
         <div class="logo">
-            <a href="admin_dashboard.php">Admin Panel</a>
+            <a href="index.php">Admin Panel</a>
         </div>
         <nav class="nav-links">
             <ul>

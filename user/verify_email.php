@@ -32,43 +32,10 @@ if (isset($_POST['verify'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Verification</title>
     <link rel="stylesheet" href="loginstyle.css">
-    <style>
-        .btn-box {
-            background-color: black;
-            font-size: 20px;
-            color: white;
-            margin-top: 20px;
-            padding: 14px 16px;
-            border-radius: 8px;
-            border: .5px solid black;
-            width: calc(100% - 32px);
-            display: block;
-            text-align: center;
-            text-decoration: none;
-        }
-
-        .btn-box:hover {
-            color: #eeeeee;
-            transform: scale(.98);
-        }
-    </style>
 </head>
 
 <body>
-    <section class="single-banner bg-light-white margin-top-header">
-        <div class="container">
-            <div class="content">
-                <h1 class="heading">My Account</h1>
-                <div class="breadcrumb m-0">
-                    <a href="../index.php">Home</a>
-                    <span>/</span>
-                    <span>My Account</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="login-user padding-top-section">
+    <section class="login-user py-5 padding-top-section">
         <div class="container">
             <h4 class="heading">Verify Your Email</h4>
             <form action="verify_email.php" method="post">
@@ -84,9 +51,9 @@ if (isset($_POST['verify'])) {
                                 autocomplete="off" required />
                         </div>
                         <div class="form-row d-flex gap-2 align-items-center">
-                            <button type="submit" class="btn white-btn checkout-btn" name="verify">Verify</button>
+                            <button type="submit" class="btn btn-secondary checkout-btn" name="verify">Verify</button>
                             <br>
-                            <a href="login.php" class="btn read-more checkout-btn">Login</a>
+                            <a href="login.php" class="btn btn-dark text-white">Login</a>
                         </div>
                     </div>
                 </div>

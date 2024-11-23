@@ -2,14 +2,14 @@
 <footer class="site-footer">
     <div class="top-footer">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-3">
                     <div class="footer-item">
                         <h4>Information</h4>
                         <ul>
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Customer Service</a></li>
-                            <li><a href="#"><span>Contact Us</span></a></li>
+                            <li><a href="http://localhost/aeroplane/contact.php"><span>Contact Us</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -18,9 +18,9 @@
                     <div class="footer-item">
                         <h4>My account</h4>
                         <ul>
-                            <li><a href="contact.php">Sign In</a></li>
-                            <li><a href="index.php">View Cart</a></li>
-                            <li><a href="faq.php">Help</a></li>
+                            <li><a href="http://localhost/aeroplane/user/login.php">Sign In</a></li>
+                            <li><a href="http://localhost/aeroplane/cart.php">View Cart</a></li>
+                            <li><a href="#">Help</a></li>
                         </ul>
                     </div>
                 </div>

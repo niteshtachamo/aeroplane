@@ -16,6 +16,11 @@ $user_name = isset($_SESSION['cmrName']) ? $_SESSION['cmrName'] : null;
     <link rel="stylesheet" href="http://localhost/aeroplane/css/animate.css">
     <link rel="stylesheet" href="http://localhost/aeroplane/css/splide.min.css">
     <link rel="stylesheet" href="http://localhost/aeroplane/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
@@ -26,7 +31,7 @@ $user_name = isset($_SESSION['cmrName']) ? $_SESSION['cmrName'] : null;
                     <div class="col-3">
                         <div class="site-logo">
                             <a href="http://localhost/aeroplane/index.php" title="">
-                                <img src="http://localhost/aeroplane/image/Screenshot 2024-09-11 013300.png" alt="">
+                                <img src="./image/logomero.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -36,8 +41,8 @@ $user_name = isset($_SESSION['cmrName']) ? $_SESSION['cmrName'] : null;
                                 <div class="form-wrap position-relative">
                                     <div class="form-group">
                                         <label for="search-product" class="sr-only">Search Products</label>
-                                        <input  name="search_keyword" class="searchInput" type="search"
-                                        placeholder="Search for Products">
+                                        <input name="search_keyword" class="searchInput" type="search"
+                                            placeholder="Search for Products">
                                         <div id="suggestionsList" class="suggestions-list"></div>
 
                                     </div>
@@ -58,13 +63,12 @@ $user_name = isset($_SESSION['cmrName']) ? $_SESSION['cmrName'] : null;
                                 </div>
                             </div>
                             <div class="login">
-                                <?php 
-                                    if(!$user_name){
-                                        echo "<a href='http://localhost/aeroplane/user/login.php' class='btn-box primary-btn'>Login</a>";
-                                    }
-                                    else {
-                                        echo "<a href='http://localhost/aeroplane/user/logout.php' class='btn-box primary-btn'>Logout</a>";
-                                    }
+                                <?php
+                                if (!$user_name) {
+                                    echo "<a href='http://localhost/aeroplane/user/login.php' class='btn-box primary-btn'>Login</a>";
+                                } else {
+                                    echo "<a href='http://localhost/aeroplane/user/logout.php' class='btn-box primary-btn'>Logout</a>";
+                                }
                                 ?>
                             </div>
                         </div>
@@ -83,10 +87,10 @@ $user_name = isset($_SESSION['cmrName']) ? $_SESSION['cmrName'] : null;
                             <li>
                                 <a href="http://localhost/aeroplane/product.php" title="">Our product</a>
                             </li>
-                            <?php 
-                                if($user_name){
-                                    echo "<li><a href='http://localhost/aeroplane/user/profile.php' title=''>Profile</a></li>";
-                                }
+                            <?php
+                            if ($user_name) {
+                                echo "<li><a href='http://localhost/aeroplane/user/profile.php' title=''>Profile</a></li>";
+                            }
                             ?>
                             <li>
                                 <a href="http://localhost/aeroplane/contact.php" title="">Contact</a>

@@ -13,7 +13,7 @@ include("function/commonfunction.php");
                         <div class="container">
                             <div class="banner-content">
                                 <div class="main-title">
-                                    <h1 class="title">AVILAX</h1>
+                                    <h1 class="title">AERO ACES</h1>
                                     <p>Every takeoff is optional. Every landing is mandatory.</p>
                                     <div class="btn-wrap">
                                         <a href="#" class="btn-box primary-btn" title>Shop now</a>
@@ -49,7 +49,7 @@ include("function/commonfunction.php");
             <div class="left-content">
                 <div class="two-col-content">
                     <h2 class="title">About</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quas inventore eos, est fugit rerum facere nulla illo tempora aperiam quis provident asperiores maxime perspiciatis architecto nobis nam placeat nesciunt!</p>
+                    <p>Welcome to Aero Aces, your premier destination for all things aviation! We specialize in offering a wide range of aircraft, aviation accessories, and services tailored for enthusiasts, professionals, and businesses. Whether you're looking for cutting-edge commercial planes, private jets, or essential parts and tools, we have you covered. Our mission is to make aviation accessible and seamless by providing high-quality products and exceptional customer support. With a team of experts passionate about flying, Aero Aces ensures reliability, innovation, and trust in every transaction. Explore the skies with us and discover why we’re the go-to choice for aviation commerce.</p>
                     <div class="btn-wrap">
                         <a href="#" title="" class="btn-box primary-btn">Shop now</a>
                     </div>
@@ -68,7 +68,7 @@ include("function/commonfunction.php");
     <div class="container">
         <div class="main-title center">
             <h2 class="title">Our product</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vel error commodi modi illum vitae iusto, dignissimos asperiores alias quo!</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vel error commodi modi illum vitae iusto, dignissimos asperiores alias quo!</p> -->
         </div>
         <div class="row g-4">
             <?php displayProducts(4)?>
